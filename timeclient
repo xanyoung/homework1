@@ -7,7 +7,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 addr = input('Enter your IP-address: ')
 
 try:
-    sock.connect(addr, 1303)
+    sock.connect((addr, 1303))
 except OSError:
     print('Address alreay in use')
     sys.exit(0)
